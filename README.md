@@ -2,7 +2,8 @@
 
 Luiz, é um ladrãozinho muito barato na grande cidade de Trapalhópolis.
   
-![<Luizinho O Espalha Lixo>](https://gartic.com.br/imgs/mural/uk/ukasapacaherb/luis-espalha-lixo.png)
+![image](https://github.com/maria2122/luizinho_o_espalha_lixo/assets/89326098/31d96ce2-94cf-4c8b-825b-9b08100a9c48)
+
 
 Ele mora nos esgotos subterrâneos desta cidade com seus companheiros Fred e Sebastião e é conhecido pelos crimes:
 
@@ -10,7 +11,8 @@ Ele mora nos esgotos subterrâneos desta cidade com seus companheiros Fred e Seb
 - Furto de Meias do Varal;
 - Espalhar Carrapatos nos Cães;
   
-![<Luizinho O Espalha Lixo>](https://i.ytimg.com/vi/cRYyuDdjuZw/hqdefault.jpg)
+![image](https://github.com/maria2122/luizinho_o_espalha_lixo/assets/89326098/67a81808-f269-4271-bfc4-256b35304942)
+
 
 Todo dia, sem que a poliícia perceba, e antes que o caminhão recolha, ele saí de seu bueiro e espalha lixo em muitos bairros da cidade, 
 gerando um grande alvoroço entre a população e autoridades da cidade.
