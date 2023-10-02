@@ -27,3 +27,7 @@ O seu crime preferido é o de espalhar lixo pela cidade, pois é o único crime 
 Dada uma rua com quantidade específicas de lixeias, Luizinho deve encontrar essas lixeiras e espalhar o lixo antes que o caminhão de lixo alcançe.
 
 
+| Personagem / Elemento | Objetivo                                                                                                                                                                         |
+| :--:    | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  Luiz                           | Personagem.                                                                                                    |
+| Lixeiro  |                                                                                                                                |
