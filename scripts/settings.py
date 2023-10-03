@@ -13,47 +13,47 @@ BG_COLOR = [12, 149, 225]
 
 TILE_SIZE = 64
 
-# x -- bloquinho que o personagem vai pisar
+# x -- bloquinho que limita o espaço
 # p -- vai ser o personagem
-# "  " -- vai ser o espaço que representa o nada
-# c -- vai ser uma plaquinha
+# "  " -- vai ser o espaço que representa o nada onde o personagem ira andar
+# c -- Sera  as latas de lixo
 
 TILE_SIZE = 64
 MAP0 = [
-'                            ',
-'                            ',
-'                            ',
-'       XXXX           XX    ',
-'   P                        ',
-'XXXXX         XX         XX ',
-' XXXX       XX              ',
-' XX    X  XXXX    XX  XX    ',
-'       X  XXXX    XX  XXX   ',
-'    XXXX  XXXXXX  XX  XXXX C',
-'XXXXXXXX  XXXXXX  XX  XXXXXX']
+'XXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+'XX    X  XXXX  XXXX XXXXXcXX',
+'XX XX XXXXXXX  XXXX XXXXX XX',
+'XX XX XX XXXXXXXXXX XXXXX XX',
+'XX c  XX XXX P XXXX  XXXX XX',
+'XX XX XX XXXX XXXXX XX XX XX',
+'XX XX XX XXXX XXXXX XX XX XX',
+'XX XX XX XXXX XXXXX XX    XX',
+'XX XX X                XXXXX',
+'XX       XXXXXXXXXX X     cX',
+'XXXXXXXXXXXXXXXXXXXXXXXXXXXX']
 
 MAP1 = [
-'                            ',
-'                            ',
-'                            ',
-'       XXXX           XX    ',
-'                            ',
-'                        XX ',
-'                            ',
-'            XX    XX  XX    ',
-'          XXXX    XX  XXX   ',
-'P         XXXXXX  XX  XXXX C',
-'XXXXXXXX  XXXXXX  XX  XXXXXX']
+'XXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+'XX P  X  XXXXXXXXXX XXXXXcXX',
+'XX XX XXXXXXXXXXXXX XXXXX XX',
+'XX XX XX XXXXXXXXXX XXXXX XX',
+'XX c  XX XXXXXXXXXX  XXXX XX',
+'XX XX XX XXXX XXXXX XX XX XX',
+'XX XX XX XXXX XXXXX XX XX XX',
+'XX XX XX XXXX XXXXX XX    XX',
+'XX XX X                XXXXX',
+'XX       XXXXXXXXXX X     cX',
+'XXXXXXXXXXXXXXXXXXXXXXXXXXXX']
 
 MAP2 = [
-'                            ',
-'                            ',
-'                            ',
-'       XXXX           XX    ',
-'                            ',
-'                        XX ',
-'                            ',
-'            XX    XX  XX    ',
-'          XXXX    XX  XXX   ',
-'P         XXXXXX  XX  XXXX C',
+'XXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+'XX    X  XXXX p XXX XXXXXcXX',
+'XX XX XXXXXXX  XXXX XXXXX XX',
+'XX XX XX XXXX XXXXX XXXXX XX',
+'XX c  XX      XXXXX  XXXX XX',
+'XX XX XX XXXXXXXXXX XX XX XX',
+'XX XX XX XXXX XXXXX XX XX XX',
+'XX XX XX XXXX XXXXX XX    XX',
+'XX XX X                XXXXX',
+'XX       XXXXXXXXXX X     cX',
 'XXXXXXXXXXXXXXXXXXXXXXXXXXXX']
