@@ -1,7 +1,7 @@
 import pygame, sys
 from scripts.menu import Menu
 # from scripts.game import Game
-# from scripts.gameover import GameOver
+from scripts.gameover import GameOver
 from scripts.settings import *
 
 class StartGame:
@@ -28,7 +28,7 @@ class StartGame:
                 # self.current_scene = Game()
             elif self.scene == "game" and self.current_scene.active == False:
                 self.scene = "gameover"
-                # self.current_scene = GameOver()
+                self.current_scene = GameOver()
             elif self.scene == "gameover" and self.current_scene.active == False:
                 self.scene = "menu"
                 self.current_scene = Menu()
