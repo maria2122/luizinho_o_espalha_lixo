@@ -11,7 +11,7 @@ class GameOver(Scene):
 
     def __init__(self):
         super().__init__()
-        self.bg = AnimatedBg("assets/menu/bg.png",
+        self.bg = AnimatedBg("assets/menu/player/luiz_game_over.png",
                              [0, 0], [0, -HEIGHT], [self.all_sprites])
         self.title = Obj("assets/menu/gameover.png", [436, 166],
                          [self.all_sprites])
