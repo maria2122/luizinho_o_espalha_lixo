@@ -13,7 +13,7 @@ class GameOver(Scene):
         super().__init__()
         self.bg = AnimatedBg("assets/menu/player/luiz_game_over.png",
                              [0, 0], [0, -HEIGHT], [self.all_sprites])
-        self.title = Obj("assets/menu/gameover.png", [436, 166],
+        self.title = Obj("assets/menu/title.png", [436, 166],
                          [self.all_sprites])
 
         self.btn_play = Button("white", 64, 520, "Return",
