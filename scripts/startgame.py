@@ -14,8 +14,8 @@ class StartGame:
         pygame.display.set_caption("Luizinho Espalha Lixo")
         
         self.display = pygame.display.set_mode([WIDTH,HEIGHT])
-        self.scene = "gameover"
-        self.current_scene = GameOver()
+        self.scene = "menu"
+        self.current_scene = Menu()
 
         self.fps = pygame.time.Clock()
     
@@ -26,6 +26,7 @@ class StartGame:
             if self.scene == "menu" and self.current_scene.active == False:
                 self.scene = "game"
                 self.current_scene = Game()
+                print("Criou game")
             elif self.scene == "game" and self.current_scene.active == False:
                 self.scene = "gameover"
                 self.current_scene = GameOver()

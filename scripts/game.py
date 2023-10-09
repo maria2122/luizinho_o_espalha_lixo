@@ -72,7 +72,7 @@ class Level:
         self.colision_sprites = pygame.sprite.Group()
 
         self.active = True
-        self.gameover = False
+        # self.gameover = False
         self.fade = Fade(5)
         # self.finish = Obj("assets/title/finish.png",
         #                   [0,0], [self.all_sprites])
