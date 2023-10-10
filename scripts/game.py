@@ -6,6 +6,7 @@ from scripts.settings import *
 from scripts.text import Text
 from scripts.player import Player
 from scripts.fade import Fade
+from scripts.camera import Camera
 
 class Game(Scene):
     def __init__(self):
@@ -68,7 +69,7 @@ class Game(Scene):
 class Level:
     def __init__(self, worldmap):
         self.display = pygame.display.get_surface()
-        self.all_sprites = pygame.sprite.Group()
+        self.all_sprites = Camera()
         self.colision_sprites = pygame.sprite.Group()
 
         self.active = True
@@ -100,11 +101,12 @@ class Level:
     #         self.gameover = True
 
     def draw(self):
-        # self.all_sprites.costum_draw(self.player)
+        self.all_sprites.costum_draw(self.player)
         # self.hud_ui.draw()
         self.fade.draw()
 
     def generate_map(self):
+        print('gerou mapa')
         for row_index, row in enumerate(self.worldmap):
             for col_index, col in enumerate(row):
                 x = col_index * TILE_SIZE

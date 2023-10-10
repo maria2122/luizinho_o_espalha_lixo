@@ -68,13 +68,21 @@ class Player(pygame.sprite.Sprite):
         key = pygame.key.get_pressed()
         if key[pygame.K_a]:
             self.direction.x = -1
-            self.flip = True
+            self.flip = False # nao vira
             self.animation(8, 3, "assets/player/luiz_esquerda_correndo.png")
         elif key[pygame.K_d]:
             self.direction.x = 1
-            self.flip = False
+            self.flip = False 
             self.animation(8, 3, "assets/player/luiz_direita_correndo.png")
-        else:
+        elif key[pygame.K_s]:
+            self.direction.y = 1
+            self.flip = False 
+            self.animation(8, 3, "assets/player/luiz_frente-64.png")
+        elif key[pygame.K_w]:
+            self.direction.y = -1
+            self.flip = False 
+            self.animation(8, 3, "assets/player/luiz_costas-64.png")
+        else: #luiz_costas-64.png
             self.direction.x = 0
             self.animation(16, 2, "assets/player/espalha.png")
 

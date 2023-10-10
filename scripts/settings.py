@@ -1,7 +1,6 @@
-from win32api import GetSystemMetrics
 
-Width = GetSystemMetrics(0)
-Height = GetSystemMetrics(1)
+Width = 1280
+Height = 720
 
 #configurações Gerais
 WIDTH = Width
