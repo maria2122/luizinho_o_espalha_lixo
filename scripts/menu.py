@@ -12,8 +12,7 @@ class Menu(Scene):
 
     def __init__(self):
         super().__init__()
-        self.bg = Obj("assets/menu/bg.png",
-                             [0,0], #[0, -HEIGHT], 
+        self.bg = Obj("assets/menu/bg.png", [0,0], #[0, -HEIGHT], 
                              [self.all_sprites])
         self.title = Obj("assets/menu/title.png", [int(WIDTH * 0.19531), int(HEIGHT * 0.10416)],
                          [self.all_sprites])

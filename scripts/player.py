@@ -5,8 +5,7 @@ class Player(pygame.sprite.Sprite):
                  groups,
                  colision_group):
         super().__init__(groups)
-        self.image= pygame.image.load(
-            "assets/player/espalha.png")
+        self.image= pygame.image.load("assets/player/luiz_fumando-64.png")
         self.rect = self.image.get_rect(topleft=pos)
         self.colision_group = colision_group
         self.speed=5
@@ -14,7 +13,7 @@ class Player(pygame.sprite.Sprite):
         self.direction = pygame.math.Vector2()
         self.gravity =0.8
 
-        self.on_ground = False
+        # self.on_ground = False
 
         self.flip = False
         self.tick = 0
@@ -22,7 +21,7 @@ class Player(pygame.sprite.Sprite):
 
     def move(self):
         self.rect.x += self.direction.x * self.speed
-
+        self.rect.y += self.direction.y * self.speed
         # if self.on_ground == False:
         #     self.image = \
         #         pygame.image.load("assets/player/jump.png")
@@ -38,7 +37,28 @@ class Player(pygame.sprite.Sprite):
         self.input()
         self.move()
         # self.gravity_force()
+        # self.colision()
         self.y_colision()
+        self.x_colision()
+
+    def colision(self):
+        for sprite in self.colision_group:
+            if sprite.rect.colliderect(self.rect):
+                if self.direction.y>0: # baixo
+                    self.direction.y = 0
+                    self.rect.bottom = sprite.rect.top
+
+                if self.direction.y < 0: # cima
+                    self.direction.y = 0
+                    self.rect.top = sprite.rect.bottom
+                
+                if self.direction.x < 0: #esquerda
+                    self.direction.x = 0
+                    self.rect.bottom = sprite.rect.top
+
+                if self.direction.x > 0: # direita
+                    self.direction.x = 0
+                    self.rect.bottom = sprite.rect.top
 
     def y_colision(self):
         for sprite in self.colision_group:
@@ -46,11 +66,21 @@ class Player(pygame.sprite.Sprite):
                 if self.direction.y>0:
                     self.direction.y = 0
                     self.rect.bottom = sprite.rect.top
-                    self.on_ground = True
 
                 if self.direction.y < 0:
                     self.direction.y = 0
                     self.rect.top = sprite.rect.bottom
+
+    def x_colision(self):
+        for sprite in self.colision_group:
+            if sprite.rect.colliderect(self.rect):
+                if self.direction.x>0:
+                    self.direction.x = 0
+                    self.rect.right = sprite.rect.left
+
+                if self.direction.x < 0:
+                    self.direction.x = 0
+                    self.rect.left = sprite.rect.right
 
     def animation(self, speed, n_img, path):
         self.tick+=1
@@ -72,8 +102,8 @@ class Player(pygame.sprite.Sprite):
             self.animation(8, 3, "assets/player/luiz_esquerda_correndo.png")
         elif key[pygame.K_d]:
             self.direction.x = 1
-            self.flip = False 
-            self.animation(8, 3, "assets/player/luiz_direita_correndo.png")
+            self.flip = True 
+            self.animation(8, 3, "assets/player/luiz_esquerda_correndo.png")#"assets/player/luiz_direita_correndo.png")
         elif key[pygame.K_s]:
             self.direction.y = 1
             self.flip = False 
@@ -84,7 +114,8 @@ class Player(pygame.sprite.Sprite):
             self.animation(8, 3, "assets/player/luiz_costas-64.png")
         else: #luiz_costas-64.png
             self.direction.x = 0
-            self.animation(16, 2, "assets/player/espalha.png")
+            self.direction.y = 0
+            self.animation(16, 2, "assets/player/luiz_fumando-64.png")
 
         # if key[pygame.K_SPACE] and self.on_ground:
         #     self.direction.y=-self.jump_force
