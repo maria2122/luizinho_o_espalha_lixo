@@ -106,7 +106,6 @@ class Level:
         self.fade.draw()
 
     def generate_map(self):
-        print('gerou mapa')
         for row_index, row in enumerate(self.worldmap):
             for col_index, col in enumerate(row):
                 x = col_index * TILE_SIZE
