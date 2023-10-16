@@ -1,18 +1,22 @@
 import pygame
 
 class Player(pygame.sprite.Sprite):
-    def __init__(self, pos,
-                 groups,
-                 colision_group):
+    def __init__(self, pos, groups, colision_group, colision_trashes, pts, score_text, score_pts, gain):
         super().__init__(groups)
         self.image = pygame.image.load("assets/player/luiz_fumando-64.png")
         self.rect = self.image.get_rect(topleft=pos)
         self.colision_group = colision_group
-        self.speed = 2
+        self.speed = 5
         self.direction = pygame.math.Vector2()
-
+        self.trashes = colision_trashes
         self.tick = 0
         self.frame = 0
+
+        self.level = 1
+        self.pts = pts
+        self.gain = gain
+        self.score_pts = score_pts
+        self.score_text = score_text
 
     def move_x(self):
         self.rect.x += self.direction.x * self.speed
@@ -24,9 +28,11 @@ class Player(pygame.sprite.Sprite):
 
     def update(self):
         self.input()
-        
+        self.move_x()
+        self.move_y()
 
     def colision(self):
+
         for sprite in self.colision_group:
             if sprite.rect.colliderect(self.rect):
                 if self.direction.y < 0: #cima
@@ -40,6 +46,14 @@ class Player(pygame.sprite.Sprite):
 
                 if self.direction.x < 0: # esquerda
                     self.rect.left = sprite.rect.right
+        
+        for trash in self.trashes:
+          if trash.rect.colliderect(self.rect):
+                trash.kill()
+                self.pts +=1
+                self.score_pts.update_text_1(str(self.pts)) 
+                self.gain.update(self.pts)
+                self.gain.draw()      
 
     def animation(self, speed, n_img, path):
         self.tick+=1

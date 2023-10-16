@@ -24,6 +24,8 @@ class Text:
     def update_text(self, text, color):
         self.text = self.font.render(text, True,
                                      color).convert_alpha()
+    def update_text_1(self, text):
+        self.text = self.font.render(text, True, self.color).convert_alpha()
 
     def drawFade(self):
 
