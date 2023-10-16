@@ -26,7 +26,6 @@ class StartGame:
             if self.scene == "menu" and self.current_scene.active == False:
                 self.scene = "game"
                 self.current_scene = Game()
-                print("Criou game")
             elif self.scene == "game" and self.current_scene.active == False:
                 self.scene = "gameover"
                 self.current_scene = GameOver()
