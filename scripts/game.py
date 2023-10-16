@@ -101,16 +101,12 @@ class Level:
     def events(self, event):
         pass
 
-    # def next_stage(self):
-    #     if self.player.rect.colliderect(self.finish.rect):
-    #         self.active = False
+    def next_stage(self):
+        if self.pts == 2:
+            self.active = False
+            self.stage = 1
 
-    def reset_position(self):
-        if self.player.rect.y > HEIGHT:
-            self.player.rect.x = 0
-            self.player.rect.y = 0
-
-            self.hud_ui.gain -= 1
+    
 
     def draw(self):
         self.all_sprites.costum_draw(self.player)
@@ -144,7 +140,7 @@ class Level:
         self.player.update()
         self.score_text.draw()
         self.score_pts.draw()
-        self.reset_position()
+        
         
 
 class Trash(Obj):

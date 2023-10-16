@@ -6,7 +6,7 @@ class Player(pygame.sprite.Sprite):
         self.image = pygame.image.load("assets/player/luiz_fumando-64.png")
         self.rect = self.image.get_rect(topleft=pos)
         self.colision_group = colision_group
-        self.speed = 5
+        self.speed = 4
         self.direction = pygame.math.Vector2()
         self.trashes = colision_trashes
         self.tick = 0
@@ -20,7 +20,7 @@ class Player(pygame.sprite.Sprite):
 
     def move_x(self):
         self.rect.x += self.direction.x * self.speed
-        self.colision()
+        
 
     def move_y(self):
         self.rect.y += self.direction.y * self.speed
